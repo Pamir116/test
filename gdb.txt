@@ -1,0 +1,73 @@
+Breakpoint 1 at 0x555555555199: file myprog.c, line 5.
+The program is not being run.
+Starting program: /home/pamir-mondal/Documents/Books/ASL/GDB/my 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at myprog.c:5
+5	    for (int i = 0; i <= 3; i++) {   // BUG: should be i < 3
+6	        printf("arr[%d] = %d\n", i, arr[i]);
+$1 = 0
+Download failed: Invalid argument.  Continuing without source file ./stdio-common/./stdio-common/printf.c.
+__printf (format=0x555555556004 "arr[%d] = %d\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
+No symbol "i" in current context.
+33	in ./stdio-common/printf.c
+No symbol "i" in current context.
+#0  __printf (format=0x555555556004 "arr[%d] = %d\n") at ./stdio-common/printf.c:33
+#1  0x00005555555551c4 in main () at myprog.c:6
+Undefined command: "backtracking".  Try "help".
+No symbol "arr" in current context.
+Starting program: /home/pamir-mondal/Documents/Books/ASL/GDB/my 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 46636) exited normally]
+Breakpoint 1 at 0x5555555551a2: file myprog.c, line 6.
+Breakpoint 2 at 0x555555555199: file myprog.c, line 5.
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x0000555555555199 in main at myprog.c:5
+The program is not being run.
+Starting program: /home/pamir-mondal/Documents/Books/ASL/GDB/my 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, main () at myprog.c:5
+5	    for (int i = 0; i <= 3; i++) {   // BUG: should be i < 3
+6	        printf("arr[%d] = %d\n", i, arr[i]);
+Starting program: /home/pamir-mondal/Documents/Books/ASL/GDB/my 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, main () at myprog.c:5
+5	    for (int i = 0; i <= 3; i++) {   // BUG: should be i < 3
+$1 = -134325520
+6	        printf("arr[%d] = %d\n", i, arr[i]);
+$2 = 0
+Download failed: Invalid argument.  Continuing without source file ./stdio-common/./stdio-common/printf.c.
+__printf (format=0x555555556004 "arr[%d] = %d\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
+Starting program: /home/pamir-mondal/Documents/Books/ASL/GDB/my 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, main () at myprog.c:5
+5	    for (int i = 0; i <= 3; i++) {   // BUG: should be i < 3
+$3 = -134325520
+6	        printf("arr[%d] = %d\n", i, arr[i]);
+$4 = 0
+5	    for (int i = 0; i <= 3; i++) {   // BUG: should be i < 3
+$5 = 0
+6	        printf("arr[%d] = %d\n", i, arr[i]);
+$6 = 1
+Download failed: Invalid argument.  Continuing without source file ./stdio-common/./stdio-common/printf.c.
+__printf (format=0x555555556004 "arr[%d] = %d\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
+33	in ./stdio-common/printf.c
+Download failed: Invalid argument.  Continuing without source file ./stdio-common/./stdio-common/vfprintf-internal.c.
+0x00007ffff7c6b524 in __vfprintf_internal (s=0x7ffff7e045c0 <_IO_2_1_stdout_>, format=0x555555556004 "arr[%d] = %d\n", ap=ap@entry=0x7fffffffda80, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1525
+warning: 1525	./stdio-common/vfprintf-internal.c: No such file or directory
